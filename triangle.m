@@ -1,4 +1,4 @@
-function Trianglex
+function Triangle
   xx=[1];
   while 1
       if ( ~isempty(xx) )
