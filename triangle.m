@@ -25,13 +25,6 @@ function triangle
            plot([x(2) x(3)],[y(2) y(3)],'b','LineWidth',1.5);
           plot([x(1) x(3)],[y(1) y(3)],'b','LineWidth',1.5);
           
-         %判斷是不是三角形
-          if  ((x(1)==x(2)&x(2)==x(3))|(y(1)==y(2)&y(2)==y(3))|(y(2)-y(1))/(x(2)-x(1))==(y(3)-y(2))/(x(3)-x(2)))
-              text(x(1)-1,x(2)+1,'這不是三角形','Color','red')
-              disp("這不是三角形")
-              
-       
-          else
           %(0,0)
           O=[0,0];
           if Z(O,x,y)==1
@@ -106,7 +99,8 @@ function triangle
       clf
   
       end
-  end
+  
+  
 %判斷點是不是在三角形的外面  
 function z=Z(p,X,Y)
    P=[p 0];
