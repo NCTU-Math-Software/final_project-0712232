@@ -29,7 +29,7 @@ function triangle
           O=[0,0];
           if Z(O,x,y)==1
               disp('原點在三角形內')
-              text(-13,13,'O : 原點(不在三角形外)','Color','black')
+              text(-13,13,'O : 原點(在三角形內)','Color','black')
           else
               disp('原點在三角形外')
               text(-13,13,'O : 原點(在三角形外)','Color','black')
@@ -42,7 +42,7 @@ function triangle
                plot(hA(1),hA(2),'gx','LineWidth',1)
                plot([x(1) hA(1)],[y(1) hA(2)],'--g')
                text(hA(1)+0.5,hA(2)+0.5,'hA','Color','green');
-               text(-13,11,'hA : A點的垂足(不在三角形外)','Color','green')
+               text(-13,11,'hA : A點的垂足(在三角形內)','Color','green')
            else
                disp('A點的垂足在三角形外')
               plot(hA(1),hA(2),'rx','LineWidth',1)
@@ -59,7 +59,7 @@ function triangle
                plot(hB(1),hB(2),'gx','LineWidth',1)
                plot([x(2) hB(1)],[y(2) hB(2)],'--g')
                text(hB(1)+0.5,hB(2)+0.5,'hB','Color','green');
-               text(-13,9,'hB : B點的垂足(不在三角形外)','Color','green')
+               text(-13,9,'hB : B點的垂足(在三角形內)','Color','green')
 
            else
               disp('B點的垂足在三角形外')
@@ -77,7 +77,7 @@ function triangle
               plot(hC(1),hC(2),'gx','LineWidth',1)
               plot([x(3) hC(1)],[y(3) hC(2)],'--g');
               text(hC(1)+0.5,hC(2)+0.5,'hC','Color','green');
-              text(-13,7,'hC : C點的垂足(不在三角形外)','Color','green')
+              text(-13,7,'hC : C點的垂足(在三角形內)','Color','green')
 
           else
               disp('C點的垂足在三角形外')
