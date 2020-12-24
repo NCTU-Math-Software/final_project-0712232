@@ -1,4 +1,4 @@
-function Triangle
+function triangle
   xx=[1];
   while 1
       if ( ~isempty(xx) )
@@ -24,7 +24,14 @@ function Triangle
           text(x(3)+0.5,y(3)+0.5,'C');
            plot([x(2) x(3)],[y(2) y(3)],'b','LineWidth',1.5);
           plot([x(1) x(3)],[y(1) y(3)],'b','LineWidth',1.5);
-
+          
+         %判斷是不是三角形
+          if  ((x(1)==x(2)&x(2)==x(3))|(y(1)==y(2)&y(2)==y(3))|(y(2)-y(1))/(x(2)-x(1))==(y(3)-y(2))/(x(3)-x(2)))
+              text(x(1)-1,x(2)+1,'這不是三角形','Color','red')
+              disp("這不是三角形")
+              
+       
+          else
           %(0,0)
           O=[0,0];
           if Z(O,x,y)==1
@@ -88,6 +95,7 @@ function Triangle
               text(-13,7,'hC : C點的垂足(在三角形外)','Color','red')
           end
           
+
       end
       [gx, ~, button] = ginput(1);    % input new interpolation point
       if ( button == 3 )% if right button, stop
@@ -97,6 +105,7 @@ function Triangle
       xx = unique([xx; gx]);           % #ok<AGROW>
       clf
   
+      end
   end
 %判斷點是不是在三角形的外面  
 function z=Z(p,X,Y)
