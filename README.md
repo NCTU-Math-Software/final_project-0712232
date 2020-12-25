@@ -26,6 +26,8 @@ output:
 
 令a,b,c,OA,OB,OC為三維空間中的向量
 
+(x是外積符號)
+
 令a=OAxOB
 
   b=OBxOC
